@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace MyMapNotes.DataModel
 {
-    // Create a MapNote model
     public class MapNote
     {
-        // title, note body, date, latitude, longitude
+        /*   Create a data model for the note.  */
+        public string Title { get; set; }
+        public string Note { get; set; }
+        public DateTime Created { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
     }
 
     class DataSource
