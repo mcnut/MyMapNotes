@@ -25,6 +25,30 @@ namespace MyMapNotes
         public MapNotes()
         {
             this.InitializeComponent();
+
+            this.NavigationCacheMode = NavigationCacheMode.Required;
+        }
+
+        /// <summary>
+        /// Invoked when this page is about to be displayed in a Frame.
+        /// </summary>
+        /// <param name="e">Event data that describes how this page was reached.
+        /// This parameter is typically used to configure the page.</param>
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            var mapNotes = await App.DataModel.GetMapNotes();
+            /*   Set the DataContext for this page to the collection of MapNotes    */
+            this.DataContext = mapNotes;
+        }
+
+        private void AddNoteButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AddMapNote));
+        }
+
+        private void ListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Frame.Navigate(typeof(AddMapNote), e.ClickedItem);
         }
     }
 }
