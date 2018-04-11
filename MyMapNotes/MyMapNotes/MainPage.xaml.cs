@@ -61,14 +61,20 @@ namespace MyMapNotes
                 BackButton.Visibility = Visibility.Visible;
                 MyFrame.Navigate(typeof(MapNotes));
                 TitleTextBlock.Text = "My Map Notes";
-            }
+            }            
             else if (AddNotePageListBoxItem.IsSelected)
             {
                 BackButton.Visibility = Visibility.Visible;
                 MyFrame.Navigate(typeof(AddMapNote));
                 TitleTextBlock.Text = "Add a Note";
             }
-            
+            else if (WeatherPageListBoxItem.IsSelected)
+            {
+                BackButton.Visibility = Visibility.Visible;
+                MyFrame.Navigate(typeof(WeatherPage));
+                TitleTextBlock.Text = "Weather";
+            }
+
         }
     }
 }

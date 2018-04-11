@@ -102,13 +102,18 @@
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LocationManager.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MapNotes.xaml.cs">
       <DependentUpon>MapNotes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OpenWeatherMapProxy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeatherPage.xaml.cs">
+      <DependentUpon>WeatherPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -117,6 +122,24 @@
     <None Include="MyMapNotes_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Weather\01d.png" />
+    <Content Include="Assets\Weather\01n.png" />
+    <Content Include="Assets\Weather\02d.png" />
+    <Content Include="Assets\Weather\02n.png" />
+    <Content Include="Assets\Weather\03d.png" />
+    <Content Include="Assets\Weather\03n.png" />
+    <Content Include="Assets\Weather\04d.png" />
+    <Content Include="Assets\Weather\04n.png" />
+    <Content Include="Assets\Weather\09d.png" />
+    <Content Include="Assets\Weather\09n.png" />
+    <Content Include="Assets\Weather\10d.png" />
+    <Content Include="Assets\Weather\10n.png" />
+    <Content Include="Assets\Weather\11d.png" />
+    <Content Include="Assets\Weather\11n.png" />
+    <Content Include="Assets\Weather\13d.png" />
+    <Content Include="Assets\Weather\13n.png" />
+    <Content Include="Assets\Weather\50d.png" />
+    <Content Include="Assets\Weather\50n.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -144,6 +167,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="MapNotes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WeatherPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
