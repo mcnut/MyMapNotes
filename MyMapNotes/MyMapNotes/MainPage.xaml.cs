@@ -25,6 +25,50 @@ namespace MyMapNotes
         public MainPage()
         {
             this.InitializeComponent();
+            BackButton.Visibility = Visibility.Collapsed;
+            MyFrame.Navigate(typeof(HomePage));
+            TitleTextBlock.Text = "Home";
+            HomePage.IsSelected = true;
+        }
+
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (MyFrame.CanGoBack)
+            {
+                MyFrame.GoBack();
+            }
+            else
+            {
+                BackButton.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (HomeListBoxItem.IsSelected)
+            {
+                BackButton.Visibility = Visibility.Collapsed;
+                MyFrame.Navigate(typeof(HomePage));
+                TitleTextBlock.Text = "Home";
+            }
+            else if (NotesPageListBoxItem.IsSelected)
+            {
+                BackButton.Visibility = Visibility.Visible;
+                MyFrame.Navigate(typeof(MapNotes));
+                TitleTextBlock.Text = "My Map Notes";
+            }
+            else if (AddNotePageListBoxItem.IsSelected)
+            {
+                BackButton.Visibility = Visibility.Visible;
+                MyFrame.Navigate(typeof(AddMapNote));
+                TitleTextBlock.Text = "Add a Note";
+            }
+            
         }
     }
 }
