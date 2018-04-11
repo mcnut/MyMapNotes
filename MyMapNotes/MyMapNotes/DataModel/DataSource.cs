@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;// Allows us to observe the collection of mapNotes
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
