@@ -14,7 +14,8 @@
     </Page.BottomAppBar>
 
     <!--    Surround the Grid with a ScrollViewer to enable viewing a long list of notes    -->
-    
+    <ScrollViewer>
+        
         <Grid Margin="20,20,20,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="80" />
@@ -45,8 +46,9 @@
             </ListView>
 
         </Grid>
-    
-    
+
+    </ScrollViewer>
+
 </Page>
     
     
