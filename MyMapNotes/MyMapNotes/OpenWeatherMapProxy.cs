@@ -21,11 +21,11 @@ namespace MyMapNotes
             /*
              * NOTE: Change the response to show the local data specific to the device location rather than the hard coded location 
              * NOTE: Replace "API_KEY_HERE" with the API key
-            var response = await http.GetAsync("http://api.openweathermap.org/data/2.5/weather?lat=54&lon=-10&units=metric&appid=9aef8eba35c4adac11d0879c38edc344");
+            var response = await http.GetAsync("http://api.openweathermap.org/data/2.5/weather?lat=54&lon=-10&units=metric&appid=API_KEY_HERE");
 
             */
             /* NOTE: Replace "API_KEY_HERE" with the API key*/
-            var url = String.Format("http://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&units=metric&appid=9aef8eba35c4adac11d0879c38edc344", lat, lon);
+            var url = String.Format("http://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&units=metric&appid=API_KEY_HERE", lat, lon);
             var response = await http.GetAsync(url);
 
 

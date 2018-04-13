@@ -36,7 +36,7 @@ namespace MyMapNotes
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
             // Replace MAP_SERVICE_TOKEN with token from bing maps dev center
-            // MyMap.MapServiceToken = "MAP_SERVICE_TOKEN";
+            MyMap.MapServiceToken = "MAP_SERVICE_TOKEN";
 
             // Use the device's Geolocator to find it's physical location
             Geopoint myPoint;
