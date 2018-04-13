@@ -7,11 +7,23 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock>home page</TextBlock>
-            <Button Name="notesPageButton" Click="notesPageButton_Click">Notes</Button>
-            <Button Name="weatherPageButton" Click="weatherPageButton_Click">Weather</Button>
-        </StackPanel>
+    <Grid Background="Lime">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2">MyMapNotes</TextBlock>
+        
+        <Button Name="notesPageButton" Click="notesPageButton_Click" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Notes</Button>
+
+        <Button Name="weatherPageButton" Click="weatherPageButton_Click" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">Weather</Button>
+    
     </Grid>
 </Page>
