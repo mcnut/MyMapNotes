@@ -7,9 +7,25 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
-            about page
-        </TextBlock>
+    <Grid Background="Lime">
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap">            
+            MyMapNotes is a free app.
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap">
+            It does not collect or store any data from the user.
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap">
+            MyMapNotes requires access to the devices location in order to function correctly but this data is not collected or stored by the app.
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap">
+            MyMapNotes uses the OpenWeatherMap API. Their privacy policy can be found at "https://openweathermap.org/privacy-policy"
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap">
+            MyMapNotes uses the Bing API. Their privacy policy can be found at "https://www.microsoft.com/en-us/maps/product
+            </TextBlock>
+            
+        </StackPanel>
+        
     </Grid>
 </Page>

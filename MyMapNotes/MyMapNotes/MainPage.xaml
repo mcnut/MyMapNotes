@@ -7,11 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="Lime">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
-
         </Grid.RowDefinitions>
         <RelativePanel>
             <Button Name="HamburgerButton" 
@@ -26,6 +25,7 @@
                     FontSize="24"
                     Content="&#xE0C4;"
                     Click="BackButton_Click" />
+            
             <TextBlock Name="TitleTextBlock" 
                        RelativePanel.RightOf="BackButton"
                        FontSize="18"
