@@ -8,8 +8,10 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
-            home page
-        </TextBlock>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock>home page</TextBlock>
+            <Button Name="notesPageButton" Click="notesPageButton_Click">Notes</Button>
+            <Button Name="weatherPageButton" Click="weatherPageButton_Click">Weather</Button>
+        </StackPanel>
     </Grid>
 </Page>

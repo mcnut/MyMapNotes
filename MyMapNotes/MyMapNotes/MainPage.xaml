@@ -38,7 +38,7 @@
         <SplitView Name="MySplitView" 
                    Grid.Row="1" 
                    DisplayMode="CompactOverlay" 
-                   OpenPaneLength="200" 
+                   OpenPaneLength="500" 
                    CompactPaneLength="56" 
                    HorizontalAlignment="Left" Grid.RowSpan="2">
             <SplitView.Pane>

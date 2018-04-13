@@ -26,7 +26,7 @@
         </StackPanel>
 
         <!--    Add a MapControl - This means declaring the ' xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps" ' namespace -->
-        <Maps:MapControl x:Name="MyMap" Grid.Row="2" />
+        <Maps:MapControl x:Name="MyMap" Grid.Row="2" Width="Auto" />
 
         <StackPanel Orientation="Horizontal" Grid.Row="3">
             <Button x:Name="addButton" Content="Add" Click="addButton_Click" Margin="0,0,10,0" />

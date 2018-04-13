@@ -33,12 +33,11 @@ namespace MyMapNotes
             var position = await LocationManager.GetPosition();
 
             RootObject myWeather = await OpenWeatherMapProxy.GetWeather(position.Coordinate.Point.Position.Latitude, position.Coordinate.Point.Position.Longitude);
-            /*   Use the icons from openweathermap.org using the url of whichever icon is required               
-             string icon = String.Format("http://openweathermap.org/img/w/{0}.png", myWeather.weather[0].icon);
-             NOTE: Changed from using openweathermap.org's icons to icons stored locally (sourced from https://github.com/Windows-Readiness/AbsoluteBeginnersWin10/tree/master/UWP-059/UWP-059).
-             When using a uri for resources in the project use the prefix "ms-appx:///" in place of "http://"
-             */
-            string icon = String.Format("ms-appx:///Assets/Weather/{0}.png", myWeather.weather[0].icon);
+            /*   Use the icons from openweathermap.org using the url of whichever icon is required    */           
+            string icon = String.Format("http://openweathermap.org/img/w/{0}.png", myWeather.weather[0].icon);
+            
+            /*   When using a uri for resources in the project use the prefix "ms-appx:///" in place of "http://" i.e.:
+            string icon = String.Format("ms-appx:///Assets/Weather/{0}.png", myWeather.weather[0].icon);    */
             /*   Display the icon on the screen by creating a new BitmapImage and giving it a new Uri  */
             ResultImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
             /*   Print the location name, the temperature and weather conditions to the screen. Cast the temperature to an int and toString to remove the decimal values.   */

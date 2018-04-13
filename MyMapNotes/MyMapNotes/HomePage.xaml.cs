@@ -28,5 +28,15 @@ namespace MyMapNotes
         }
 
         public static bool IsSelected { get; internal set; }
+
+        private void notesPageButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MapNotes));
+        }
+
+        private void weatherPageButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(WeatherPage));
+        }
     }
 }
