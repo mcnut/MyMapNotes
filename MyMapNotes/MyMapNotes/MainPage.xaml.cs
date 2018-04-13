@@ -74,6 +74,12 @@ namespace MyMapNotes
                 MyFrame.Navigate(typeof(WeatherPage));
                 TitleTextBlock.Text = "Weather";
             }
+            else if (AboutPageListBoxItem.IsSelected)
+            {
+                BackButton.Visibility = Visibility.Visible;
+                MyFrame.Navigate(typeof(AboutPage));
+                TitleTextBlock.Text = "About";
+            }
 
         }
     }

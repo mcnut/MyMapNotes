@@ -61,7 +61,7 @@
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets"
                                        FontSize="36"
-                                       Text="&#xE734;" />
+                                       Text="&#xE1F1;" />
                             <TextBlock FontSize="24" 
                                        Text="View Notes" 
                                        Margin="20,0,0,0" />
@@ -72,7 +72,7 @@
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets"
                                        FontSize="36"
-                                       Text="&#xE734;" />
+                                       Text="&#xE1C2;" />
                             <TextBlock FontSize="24"
                                        Text="Add Note"
                                        Margin="20,0,0,0" />
@@ -83,12 +83,24 @@
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets"
                                        FontSize="36"
-                                       Text="&#xE734;" />
+                                       Text="&#xE793;" />
                             <TextBlock FontSize="24"
                                        Text="Weather"
                                        Margin="20,0,0,0" />
                         </StackPanel>
                     </ListBoxItem>
+
+                    <ListBoxItem Name="AboutPageListBoxItem">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets"
+                                       FontSize="36"
+                                       Text="&#xE11B;" />
+                            <TextBlock FontSize="24"
+                                       Text="About"
+                                       Margin="20,0,0,0" />
+                        </StackPanel>
+                    </ListBoxItem>
+
                 </ListBox>
             </SplitView.Pane>
             <SplitView.Content>

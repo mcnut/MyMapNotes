@@ -92,6 +92,9 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AddMapNote.xaml.cs">
       <DependentUpon>AddMapNote.xaml</DependentUpon>
     </Compile>
@@ -136,6 +139,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AddMapNote.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
