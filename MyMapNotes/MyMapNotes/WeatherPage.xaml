@@ -7,10 +7,30 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Background="Lime">
-        <Button Name="WeatherButton"  Content="Get Weather" Click="WeatherButton_Click" />
-        <TextBlock Name="ResultTextBlock" />
-        <Image Name="ResultImage" Width="200" Height="200" />
-        <TextBlock Name="MyLocationTextBlock" />
-    </StackPanel>
+    <Grid Background="Lime">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="200" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Name="ButtonBox" Visibility="Visible">
+            <Button Name="WeatherButton" Content="Get Weather" Click="WeatherButton_Click" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </StackPanel>        
+        
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Name="CityTextBlock" FontSize="24"/>            
+            <TextBlock Name="TempTextBlock" FontSize="24" HorizontalAlignment="Center" />
+            <TextBlock Name="DescriptionTextBlock" />
+        </StackPanel>
+
+        <Image Name="ResultImage" Width="200" Height="200" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+        <StackPanel Grid.Row="3">
+            <TextBlock Name="LatitudeTextBlock" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <TextBlock Name="LongitudeTextBlock" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </StackPanel>
+               
+    </Grid>
 </Page>

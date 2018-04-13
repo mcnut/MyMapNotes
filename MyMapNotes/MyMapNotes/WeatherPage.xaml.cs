@@ -41,8 +41,13 @@ namespace MyMapNotes
             /*   Display the icon on the screen by creating a new BitmapImage and giving it a new Uri  */
             ResultImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
             /*   Print the location name, the temperature and weather conditions to the screen. Cast the temperature to an int and toString to remove the decimal values.   */
-            ResultTextBlock.Text = myWeather.name + " - " + ((int)myWeather.main.temp).ToString() + " - " + myWeather.weather[0].description;
-            MyLocationTextBlock.Text = "Lat: " + position.Coordinate.Point.Position.Latitude.ToString() + " Lon: " + position.Coordinate.Point.Position.Longitude.ToString();
+            CityTextBlock.Text = myWeather.name;
+            TempTextBlock.Text = ((int)myWeather.main.temp).ToString();
+            DescriptionTextBlock.Text = myWeather.weather[0].description;            
+            LatitudeTextBlock.Text = "Latitude: " + position.Coordinate.Point.Position.Latitude.ToString();
+            LongitudeTextBlock.Text = " Longitude: " + position.Coordinate.Point.Position.Longitude.ToString();
+            /*  Hide the button */
+            ButtonBox.Visibility = Visibility.Collapsed;
         }
     }
 }
